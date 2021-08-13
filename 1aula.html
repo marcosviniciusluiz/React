@@ -1,0 +1,67 @@
+<!--
+Acesse o site do React no endereço: reactjs.org 
+Clique na Aba DOCS
+Clique na Aba CDN Links
+Nesta Aba temos as 2 bibliotecas: O React e o React DOM
+O React DOM é a conexão do Core=Essencial do React com o DOM que é o HTML
+Temos a versão de: Desenvolvimento e Produção
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>React - Olá Mundo!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style> 
+        .title { 
+            color: red
+        }
+        .subtitle { 
+            color: green
+        }
+    </style>
+</head>
+<body>
+    <!-- 2-Criamos uma div com id = root -->
+    <div id="root"></div>
+
+    <!-- 1-Usaremos a Versão de Desenvolvimento e copiamos e colamos dentro da tag body -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> 
+    
+    <!--
+        3-Criamos uma tag script
+         ReactDOM - Método render possui 2 parâmetros:
+         Primeiro parâmetro o que vamos renderizar: vamos usar a biblioteca: 
+         React.createElement que contém: Um parâmetro, um atributo e o filho do elemento
+         Segundo parâmetro direcionamos por document.getElementById para o root
+         Obs: O createElement é criou um elemento react ele transformou esse elemento que chamamos de
+         de react element em uma tag html (que é uma representação do que vamos renderizar no DOM
+         ele vai renderizar como uma tag mais possui muito mais recurso que a própria tag html)
+         E react elemento e a tag html não são a mesma coisa:
+    -->
+    <script>
+        var e = React.createElement
+
+        ReactDOM.render(
+            e(
+                "h1", 
+                { className: "title" },
+                "Olá Mundo!",
+                e("br"),
+                e(
+                    "small",
+                    { className: "subtitle" },
+                    "Olá React!"
+                )
+            ),
+            document.getElementById("root")
+        )
+    </script> 
+
+</body>
+</html>
+
