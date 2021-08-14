@@ -71,40 +71,34 @@
     
     <script type="text/babel"> 
 
-        function Header() {
-            return (     
-                <div class="header">Calculadora</div>
-            )
-        }
+        const Header = () => <div class="header">Calculadora</div>
+            
+        
 
-        function Calculator() {
-            return(
-                <div class="calculator">
-                    <div class="display"></div>
-                    <div class="keyboard">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>1</button> 
-                        <button>2</button>
-                        <button>3</button>
-                        <button>0</button>
-                    </div>
+        const Calculator = () => (
+            <div class="calculator">
+                <div class="display"></div>
+                <div class="keyboard">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button> 
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
                 </div>
-            )   
-        }
-
-        function App() {
-            return (
-                <div>
-                    <Header />,
-                    <Calculator />
-                </div>
-            )
-        }
+            </div>
+        )   
+        
+        const App = () => (
+            <div>
+                <Header />,
+                <Calculator />
+            </div>
+        )    
     
         ReactDOM.render(
             <App />,
